@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="main.css">
+    <title>Первое тестовое задание</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h2 class="test__h2">
+          общие и конкретные цели презентации
+        </h2>
+        <div class="test__block movie">
+          <div class="add">
+              <video src="v06.mp4" controls poster="06-01-01.png"></video>
+              <p>Посмотрите киноэпизод</p>
+          </div>
+        </div>
+        <div class="test__block information">
+          <div class="text"><span>Чем конкретнее сформулирована цель, тем больше определенности в дальнейших шагах.</span> Герои фильма определяют цели своего выступления перед разными аудиториями. И хотя тема презентации одна – цели оказываются разными. Разными оказываются и общие, и конкретные цели.</div>
+          <div class="text"><span>Общая цель</span> определяет, <span>какого результата вы хотите добиться в целом.</span></div>
+          <div class="text"><span>Конкретная цель</span> показывает, <span>что слушатель должен знать, чувствовать и делать.</span> Конкретную цель можно выразить целым предложением.</div>
+        </div>
+        <a class="test__block link">
+          <img src="icon_info.png" alt="иконка">
+          <p><span>Примеры общих и конкретных целей</span></p>
+        </a>
+        <div class="modal">
+          <div class="modal__wrapper">
+                <div class="modal__header">
+                  <button class="modal__close"><img src="close.png" alt="закрыть" width="20" height="20"></button>
+                  <h3 class="modal__h3">Примеры общих и конкретных целей:</h3>
+                </div>
+                <div class="modal__content">
+                  <div class="modal__rows first">
+                    <div class="modal__column title">Общие цели</div>
+                    <div class="modal__column more">Конкретные цели</div>
+                  </div>
+                  <div class="modal__rows">
+                    <div class="modal__column title">Проинформировать</div>
+                    <div class="modal__column more">Я хочу представить сотрудникам детальную информацию о новой системе безопасности.</div>
+                  </div>
+                  <div class="modal__rows">
+                    <div class="modal__column title">Научить</div>
+                    <div class="modal__column more">Я хочу обучить сотрудников пользоваться новой системой безопасности.</div>
+                  </div>
+                  <div class="modal__rows">
+                    <div class="modal__column title">Убедить</div>
+                    <div class="modal__column more">Я хочу, чтобы слушатели почувствовали уверенность в том, что новая система не доставит им никаких неудобств.</div>
+                  </div>
+                  <div class="modal__rows">
+                    <div class="modal__column title">Побудить к действию</div>
+                    <div class="modal__column more">Я хочу, чтобы руководство закупило новую систему безопасности.</div>
+                  </div>
+                </div>
+                <button class="modal__button">продолжить</button>
+          </div>
+        </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const openWindow = document.querySelector('.link');
+    const closeWindow = document.querySelector('.modal__close');
+    const modalWindow = document.querySelector('.modal');
+
+    openWindow.addEventListener('click', showWindow, false);
+    closeWindow.addEventListener('click', hideWindow, false)
+
+    function showWindow(){
+      if(openWindow){
+        modalWindow.style.display = "block";
+      }
+      else{
+        return false;
+      }
+    }
+
+    function hideWindow(){
+      if(closeWindow){
+        modalWindow.style.display = "none";
+      }
+      else{
+        return false;
+      }
+    }
+  </script>
+</html>
